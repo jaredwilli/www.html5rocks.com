@@ -1676,3 +1676,23 @@ homepage: http://anti-code.com
 google: 112784098959391435720
 twitter: jaredwilli
 email: jaredwilli@gmail.com
+
+---
+
+id: jeffposnick
+name:
+  given: Jeff
+  family: Posnick
+org:
+  name: Google
+  unit: Developer Relations
+address:
+  locality: New York
+  region: New York
+  country: USA
+  lat: 40.740914
+  lon: -74.002032
+homepage:
+google: 117780118136555864520
+twitter: jeffposnick
+email: jeffy@google.com
