@@ -52,7 +52,7 @@ address:
 homepage: https://google.com/+viviancromwell
 google: 109147099159025717832
 twitter: viviancromwell
-email: 
+email:
 
 ---
 
@@ -1617,7 +1617,7 @@ google: 106129485759840435120
 twitter: pbakaus
 email: pbakaus@google.com
 
---- 
+---
 
 id: axemclion
 name:
@@ -1637,7 +1637,7 @@ google: 104762410544673618090
 twitter: nparashuram
 email: code@r.nparashuram.com
 
---- 
+---
 
 id: pearlchen
 name:
@@ -1656,3 +1656,23 @@ homepage: http://karma-laboratory.com
 google: 108076675731922659261
 twitter: PearlChen
 email: pearlchen@google.com
+
+---
+
+id: jaredwilli
+name:
+  given: Jared
+  family: Williams
+org:
+  name: Brightcove
+  unit: Consulting
+address:
+  locality: Boston
+  region: Massachusetts
+  country: USA
+  lat: 42.379021
+  lon: -70.975878
+homepage: http://anti-code.com
+google: 112784098959391435720
+twitter: jaredwilli
+email: jaredwilli@gmail.com
