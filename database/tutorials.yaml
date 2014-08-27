@@ -2749,11 +2749,10 @@ title: "Blackbox JavaScript Source Files with Chrome DevTools"
 subtitle: ""
 url: /tutorials/developertools/blackboxing/
 author_id: jaredwilli
-publication_date: 2014-03-26
-update_date: 2014-07-04
-description: "Debug just the code you care about most by blackboxing JavaScript source files."
+publication_date: 2014-08-28
+description: "Focus on debugging the code you care about by blackboxing JavaScript source files."
 browser_support:
 - chrome
 tags:
 - devtools
-- type:article
+- type:tutorial

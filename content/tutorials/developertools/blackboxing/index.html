@@ -1,22 +1,19 @@
+<!--
+1. Add your author info to database/profiles.yaml.
+2. Add your tutorial/article metata info to database/tutorials.yaml.
+3. Update the {% block iscompatible %} below with your feature detection check.
+-->
+
 {% extends "tutorial.html" %}
 {% load mixin from templatefilters %}
 
-{% block headauthor %}Arthur Evans{% endblock %}
 {% block pagebreadcrumb %}{{ tut.title }}{% endblock %}
 
-{% block browsersupport %}
-<span class="browser opera"><span class="browser_name">Opera</span><span class="support">unsupported</span></span>
-<span class="browser ie"><span class="browser_name">Internet Explorer</span><span class="support">unsupported</span></span>
-<span class="browser safari supported"><span class="browser_name">Safari</span><span class="support">supported</span></span>
-<span class="browser ff"><span class="browser_name">Firefox</span><span class="support">unsupported</span></span>
-<span class="browser chrome supported"><span class="browser_name">Chrome</span><span class="support">supported</span></span>
-{% endblock %}
+{% block head %}
+<!-- CSS/JS can go here or at the bottom of the article just before the content {% endblock %} -->
 
 {% block iscompatible %}
-{% endblock %}
-
-
-{% block head %}
+  return !!Modernizr.___COMPAT_TEST___
 {% endblock %}
 
 {% block html5badge %}
@@ -30,11 +27,12 @@
 
 {% block content %}
 
+
 <p>When you are developing an application, there are times when you will need to debug your code. While doing this, you could be stepping through the code you are writing line by line, when suddenly the debugger will jump into a source file that you are not actually working in, like a third-party library you are using for instance. The lines of code in that library are not what you are trying to debug so stepping through the code in it is not important to you. If you have ever had to do this before while debugging an application you probably know how much of a pain this is. It can take a long time for you to step through the code in a library before you get back to stepping through the code you are developing.</p>
 
 <p>This is where blackboxing scripts becomes useful. When you blackbox a source file, you will not jump into that file when stepping through code you're debugging. You are able to debug just the code you are interested in.</p>
 
-Note: This article is based on how the feature looks and functions using Chrome Canary. Although it exists in Chrome stable, some of the UI may appear different.
+<p class="note"><strong>Note</strong>: This article is based on how the feature looks and functions using Chrome Canary. Although it exists in Chrome stable, some of the UI may appear different.</p>
 
 <p>When a script is not blackboxed, it is very likely something like this will happen:</p>
 
@@ -62,7 +60,7 @@ Note: This article is based on how the feature looks and functions using Chrome 
 
 <p><img src="blackboxing-2.png" /></p>
 
-<p>This will open up a dialog where you can input file names of scripts that you would like to add to the blacklist. You can enter just the name of a file, or to be more specific you can use regular expressions to blackbox files that contain a specific name /backbone\.js$ or certain types of files like \.min\.js$. Lastly, you can enter in an entire folder that contains scripts you want to blackbox such as bower_components.</p>
+<p>This will open up a dialog where you can input file names of scripts that you would like to add to the blacklist. You can enter just the name of a file, or to be more specific you can use regular expressions to blackbox files that contain a specific name <code>/backbone\.js$</code> or certain types of files like <code>\.min\.js$</code>. Lastly, you can enter in an entire folder that contains scripts you want to blackbox such as <code>bower_components</code>.</p>
 
 <p><img src="blackboxing-3.png" /></p>
 
@@ -100,4 +98,8 @@ Note: This article is based on how the feature looks and functions using Chrome 
 
 <p>To sum things up, while debugging your application code blackboxing the third-party libraries and other scripts which you are not actively developing can help increase your productivity and help keep your focus on the code you really care about. It is easy to enable using any workflow and just as easy to disable if the need to do so arises.</p>
 
+
 {% endblock %}
+
+
+
